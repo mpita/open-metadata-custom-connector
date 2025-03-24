@@ -1,0 +1,17 @@
+source:
+  type: custom-source
+  serviceName: my_simple_service
+  sourceConfig:
+    config:
+      type: MySimpleConnector
+  pythonClass: connector.my_simple_connector.MySimpleConnector
+
+sink:
+  type: metadata-rest
+  config: {}
+
+workflowConfig:
+  loggerLevel: DEBUG
+  openMetadataServerConfig:
+    hostPort: http://localhost:8585
+    authProvider: no-auth
