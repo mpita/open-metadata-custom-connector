@@ -8,4 +8,4 @@ USER airflow
 COPY custom-connector/connector connector
 COPY custom-connector/setup.py .
 
-RUN pip install --no-deps .
+RUN pip install --no-deps -e .
